@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    div.container
+        h3 Contactinfo
+        ul
+            li
+    div.container
+        h3 Hebt u een vraag of wenst u meer informatie?
+        p Aarzel niet om ons te contacteren
+        form(action="")
+            div.form-group
+                label Naam
+                input(type="text").form-control
+            div.form-group
+                label E-mail
+                input(type="mail").form-control
+            div.form-group
+                label Uw vraag
+                input(type="text").form-control
+            button(type="submit").btn.btn-primary Verzend
