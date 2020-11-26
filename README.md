@@ -1,5 +1,12 @@
 # Internetapplicaties - Webshop
 
+
+# Zelf opzetten
+Repo clonen  
+In de map `npm install` uitvoeren. Installeert alle nodige dependencies.
+Webserver starten: ``npm run devstart` (auto herstart na wijziging) of `npm start`
+
+# Development
 ## Express opzetten
 Terminal in c:/  
 `npm install express-generator -g`
@@ -22,7 +29,8 @@ start project nu door: `npm run devstart`
 Online cloud platform
 DB-user: `dbUser/VfT90sq65jBqAjur`  
 DatabaseName: `webshopDB`
-Connection string: `mongodb+srv://dbUser:<password>@cluster.rozhm.mongodb.net/<dbname>`  retryWrites=true&w=majority
+Connection string: `mongodb+srv://dbUser:<password>@cluster.rozhm.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
 ## Mongoose
 Gebruiken om te verbinden met MongoDB
+
