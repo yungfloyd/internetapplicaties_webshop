@@ -3,8 +3,8 @@
 
 # Zelf opzetten
 Repo clonen  
-In de map `npm install` uitvoeren. Installeert alle nodige dependencies.
-Webserver starten: ``npm run devstart` (auto herstart na wijziging) of `npm start`
+In de map `npm install` uitvoeren. Installeert alle nodige dependencies.  
+Webserver starten: `npm run devstart` (auto herstart na wijziging) of `npm start`
 
 # Development
 ## Express opzetten
