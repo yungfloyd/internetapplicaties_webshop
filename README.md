@@ -7,7 +7,7 @@ In de map `npm install` uitvoeren. Installeert alle nodige dependencies.
 Webserver starten: `npm run devstart` (auto herstart na wijziging) of `npm start`
 
 # Development
-## Express opzetten
+## Express.js
 Terminal in c:/  
 `npm install express-generator -g`
 
