@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div.login_div
+        h3 Login
+        form(action="")
+            div.form-group
+                label E-mailadres of gebruikersnaam
+                input(type="text").form-control
+            div.form-group
+                label Wachtwoord
+                input(type="password", name="Wachtwoord").form-control
+            button(type="submit").btn.btn-primary Aanmelden
