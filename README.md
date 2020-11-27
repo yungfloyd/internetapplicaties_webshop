@@ -18,9 +18,39 @@ Terminal in project folder
 `SET DEBUG=*`  
 `npm start`
 
-## Automatisch herstarten na wijziging
+
+## Automatisch server herstarten na wijziging
 `npm install --save-dev nodemon`  
-start project nu door: `npm run devstart`
+in package.json:  
+```
+"scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon -e js,pug --ignore public",
+    "serverstart": "DEBUG=* npm run devstart"
+  },
+```
+start project nu door: `npm run devstart`  
+
+
+## Automatisch browser refreshen na wijzigin
+`npm install livereload --save`  
+`npm install connect-livereload --save`  
+in app.js:  
+```
+// LiveReload server
+var livereload = require("livereload");
+var liveReloadServer = livereload.createServer();
+liveReloadServer.watch(path.join(__dirname, 'public'));
+```
+
+```
+var connectLivereload = require("connect-livereload");
+
+var app = express();
+
+app.use(connectLivereload());
+```
+
 
 ## BOOTSTRAP - CSS template
 [Bootstrap](https://getbootstrap.com/)

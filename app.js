@@ -4,12 +4,24 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var connectLivereload = require("connect-livereload");
+
+// LiveReload server
+var livereload = require("livereload");
+var liveReloadServer = livereload.createServer();
+liveReloadServer.watch(path.join(__dirname, 'public'));
+
 
 var indexRouter = require('./routes/index');
 var contactRouter = require('./routes/contact');
 var boekenRouter = require('./routes/boeken');
+var loginRouter = require('./routes/login');
+
+
 
 var app = express();
+
+app.use(connectLivereload());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/contact', contactRouter);
 app.use('/boeken', boekenRouter);
+app.use('/login', loginRouter);
 
 
 // catch 404 and forward to error handler
@@ -42,6 +55,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
 // mongoDB connection
 const uri = "mongodb+srv://dbUser:VfT90sq65jBqAjur@cluster.rozhm.mongodb.net/webshopDB?retryWrites=true&w=majority";
 mongoose.connect(uri, {
@@ -52,5 +66,12 @@ mongoose.connect(uri, {
   console.log('MongoDB Connected…')
 })
 .catch(err => console.log(err))
+
+// Request browser to reload page
+liveReloadServer.server.once("connection", () => {
+  setTimeout(() => {
+    liveReloadServer.refresh("/");
+  }, 100);
+});
 
 module.exports = app;
