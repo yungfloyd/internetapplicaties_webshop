@@ -33,10 +33,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Routing setup
 app.use('/', indexRouter);
-app.use('/contact', contactRouter);
-app.use('/boeken', boekenRouter);
-app.use('/login', loginRouter);
+app.use('/', menuRouter);
+app.use('/', loginRouter);
 
 
 // catch 404 and forward to error handler
