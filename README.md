@@ -62,5 +62,15 @@ DatabaseName: `webshopDB`
 Connection string: `mongodb+srv://dbUser:<password>@cluster.rozhm.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
 ## Mongoose
-Gebruiken om te verbinden met MongoDB
+Gebruiken om te verbinden met MongoDB  
+
+## Session
+`npm install express-session --save`  
+Geen idee wat dit eigenlijk doet  
+
+## Passport
+`npm install passport --save`  
+`npm install passport-local-mongoose --save`  
+
+Gemakkelijk voor de login dinges  
 
