@@ -1,13 +1,32 @@
 extends layout
 
 block content
-    div.login_div
-        h3 Login
-        form(action="")
-            div.form-group
-                label E-mailadres of gebruikersnaam
-                input(type="text").form-control
-            div.form-group
-                label Wachtwoord
-                input(type="password", name="Wachtwoord").form-control
-            button(type="submit").btn.btn-primary Aanmelden
+    .container
+        .row.justify-content-center
+            .login.col-sm-4.rounded
+                h3 Login
+                form(role="form" action="/login" method="POST")
+                    p Je kan inloggen met je gebruikersnaam of e-mailadres
+                    .form-group
+                        input(type="text" name="emailOrUsername" placeholder="Gebruikersnaam/E-mail" autocomplete="username email").form-control
+                    .form-group
+                        input(type="password" name="password" placeholder="Wachtwoord" autocomplete="current-password").form-control
+                    button(type="submit").btn.btn-primary Aanmelden
+
+            .register.col-sm-4.rounded
+                h3 Registreer
+                form(role="form" action="/register" method="POST")
+                    .form-row
+                        .col-sm-5.form-group
+                            input(type="text" name="prename" placeholder="Voornaam" autocomplete="given-name").form-control
+                        .col-sm-7.form-group
+                            input(type="text" name="name" placeholder="Naam" autocomplete="family-name").form-control
+                    .form-group
+                        input(type="text" name="email" placeholder="E-mail" autocomplete="email").form-control
+                    .form-group
+                        input(type="text" name="username" placeholder="Gebruikersnaam" autocomplete="username").form-control
+                    .form-group
+                        input(type="password" name="password" placeholder="Wachtwoord" autocomplete="new-password").form-control
+                    .form-group
+                        input(type="password" name="confirmPassword" placeholder="Bevestig wachtwoord" autocomplete="new-password").form-control
+                    button(type="submit").btn.btn-primary Registreren

@@ -24,8 +24,11 @@ html(lang=nl)
             h4
               a(href='/contact').nav-link Contact
           
-        form.form-inline
-          a(href="/login").btn.btn-outline-success.login-btn Login
+          if(!user)
+            a(href="/login").btn.btn-outline-success.login-btn Login
+          if(user)
+            p.login-btn Hallo, #{user.username}
+            a(href="logout").btn.btn-outline-success Logout
     
     block content
 

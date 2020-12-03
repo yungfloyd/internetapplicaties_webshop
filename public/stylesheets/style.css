@@ -3,16 +3,27 @@
   right: 25px;
 }
 
-.login_div {
+div.login {
   background-color: grey;
-  position: relative;
-  top: 50px;
-  left: 15%;
-  width: 20%;
-  height: 45%;
+  color: blue;
+  margin-top: 30px;
+  margin-right: 30px;
+  height: 325px;
+}
+
+div.register {
+  background-color: red;
+  color: white;
+  margin-top: 30px;
+  height: 450px;
 }
 
 .contact_row {
   margin-top: 20px;
   margin-bottom: 20px;
+  height: 70%;
+}
+
+.container {
+  height: 100%;
 }
