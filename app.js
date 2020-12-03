@@ -5,6 +5,25 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var connectLivereload = require("connect-livereload");
+var passport = require('passport');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+
+
+// mongoDB connection
+const uri = "mongodb+srv://dbUser:VfT90sq65jBqAjur@cluster.rozhm.mongodb.net/webshopDB?retryWrites=true&w=majority";
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log('MongoDB Connected…')
+})
+.catch(err => console.log(err))
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 
 // LiveReload server
 var livereload = require("livereload");
@@ -13,15 +32,27 @@ liveReloadServer.watch(path.join(__dirname, 'public'));
 
 
 var indexRouter = require('./routes/index');
-var contactRouter = require('./routes/contact');
-var boekenRouter = require('./routes/boeken');
+var menuRouter = require('./routes/menu');
 var loginRouter = require('./routes/login');
-
-
 
 var app = express();
 
 app.use(connectLivereload());
+
+// session
+app.use(
+  require('express-session')({
+    secret: "EnH1syZ79G2sdlMUZArpQjs1UFLAru",
+    resave: false,
+    saveUninitialized: true,
+    store: new MongoStore({mongooseConnection: db})
+  })
+)
+
+
+// passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -54,18 +85,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
-// mongoDB connection
-const uri = "mongodb+srv://dbUser:VfT90sq65jBqAjur@cluster.rozhm.mongodb.net/webshopDB?retryWrites=true&w=majority";
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  console.log('MongoDB Connected…')
-})
-.catch(err => console.log(err))
 
 // Request browser to reload page
 liveReloadServer.server.once("connection", () => {
