@@ -27,11 +27,3 @@ div.register {
 .container {
   height: 100%;
 }
-
-.logged_in {
-  position: absolute;
-  right: 25px;
-
-  color: green;
-  font-weight: bold;
-}
