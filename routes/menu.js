@@ -3,92 +3,92 @@ var router = express.Router();
 
 // GET index page.
 router.get('/', function(req, res, next) {
-    res.render('index', {user :  req.user});
+    res.render('index');
 });
 
 // GET contact page.
 router.get('/contact', function(req, res, next) {
-    res.render('contact', {user :  req.user});
+    res.render('contact');
 });
 
 // GET caddie page.
 router.get('/winkelwagen', function(req, res, next) {
-    res.render('winkelwagen', {user :  req.user});
+    res.render('winkelwagen');
 });
 
 // GET shirts page.
 router.get('/shirts', function(req, res, next) {
-    res.render('shirts', {user :  req.user});
+    res.render('shirts');
 });
 
 // GET blue shirt page.
 router.get('/shirtBlauw', function(req, res, next) {
-    res.render('shirtBlauw', {user :  req.user});
+    res.render('shirtBlauw');
 });
 
 // GET red shirt page.
 router.get('/shirtRood', function(req, res, next) {
-    res.render('shirtRood', {user :  req.user});
+    res.render('shirtRood');
 });
 
 // GET black shirt page.
 router.get('/shirtZwart', function(req, res, next) {
-    res.render('shirtZwart', {user :  req.user});
+    res.render('shirtZwart');
 });
 
 // GET shorts page.
 router.get('/shorts', function(req, res, next) {
-    res.render('shorts', {user :  req.user});
+    res.render('shorts');
 });
 
 // GET blue short page.
 router.get('/shortBlauw', function(req, res, next) {
-    res.render('shortBlauw', {user :  req.user});
+    res.render('shortBlauw');
 });
 
 // GET red short page.
 router.get('/shortRood', function(req, res, next) {
-    res.render('shortRood', {user :  req.user});
+    res.render('shortRood');
 });
 
 // GET black short page.
 router.get('/shortZwart', function(req, res, next) {
-    res.render('shortZwart', {user :  req.user});
+    res.render('shortZwart');
 });
 
 // GET socks page.
 router.get('/sokken', function(req, res, next) {
-    res.render('sokken', {user :  req.user});
+    res.render('sokken');
 });
 
 // GET blue socks page.
 router.get('/sokkenBlauw', function(req, res, next) {
-    res.render('sokkenBlauw', {user :  req.user});
+    res.render('sokkenBlauw');
 });
 
 // GET red socks page.
 router.get('/sokkenRood', function(req, res, next) {
-    res.render('sokkenRood', {user :  req.user});
+    res.render('sokkenRood');
 });
 
 // GET black socks page.
 router.get('/sokkenZwart', function(req, res, next) {
-    res.render('sokkenZwart', {user :  req.user});
+    res.render('sokkenZwart');
 });
 
 // GET trainings page.
 router.get('/trainings', function(req, res, next) {
-    res.render('trainings', {user :  req.user});
+    res.render('trainings');
 });
 
 // GET blue training page.
 router.get('/trainingBlauw', function(req, res, next) {
-    res.render('trainingBlauw', {user :  req.user});
+    res.render('trainingBlauw');
 });
 
 // GET black training page.
 router.get('/trainingZwart', function(req, res, next) {
-    res.render('trainingZwart', {user :  req.user});
+    res.render('trainingZwart');
 });
 
 
