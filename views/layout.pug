@@ -27,8 +27,9 @@ html(lang=nl)
           if(!user)
             a(href="/login").btn.btn-outline-success.login-btn Login
           if(user)
-            p.login-btn Hallo, #{user.username}
-            a(href="logout").btn.btn-outline-success Logout
+            .align-middle.logged_in
+              a(href="logout")
+                p Hallo, #{user.username}
     
     block content
 
