@@ -74,3 +74,20 @@ Geen idee wat dit eigenlijk doet
 
 Gemakkelijk voor de login dinges  
 
+## Google Maps (1ste API)
+Op de contact pagina  
+`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.6307419508366!2d3.150585715748851!3d50.93054737954455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c33661a8ed09df%3A0x578cd95140e2ae8a!2sKoestraat%2020%2C%208800%20Roeselare!5e0!3m2!1snl!2sbe!4v1606408350147!5m2!1snl!2sbe" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`
+
+## Google Analytics (2de API)
+In head:    
+```
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CGSR8CPY3N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CGSR8CPY3N');
+</script>
+```
