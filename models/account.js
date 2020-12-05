@@ -14,12 +14,5 @@ var GebruikerSchema = new Schema(
 
 GebruikerSchema.plugin(passportLocalMongoose)
 
-// Virtual voor url van de gebruiker
-GebruikerSchema
-    .virtual('url')
-    .get(function () {
-        return '/menu/user/' + this._id;
-    });
-
 // Export model
 module.exports = mongoose.model('Gebruiker', GebruikerSchema);

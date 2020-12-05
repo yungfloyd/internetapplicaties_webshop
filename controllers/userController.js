@@ -13,13 +13,13 @@ exports.login_get = function(req, res) {
 exports.login_post = [
     passport.authenticate('local'),
     function(req, res) {
-        res.render('index');
+        res.redirect('/');
     }
 ]
 
 exports.logout_get = function(req, res) {
     req.logout();
-    res.render('index');
+    res.redirect('/');
 };
 
 exports.register_post = function(req, res) {
@@ -36,7 +36,7 @@ exports.register_post = function(req, res) {
                 return res.render('login');
             }
         passport.authenticate('local')(req, res, function () {
-            res.render('index');
+            res.redirect('/');
         });
     });
 }
