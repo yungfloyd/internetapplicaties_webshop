@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    br
+    p(style="margin-left: 50px;") Welkom, maak hier kennis met ons assortiment aan sportshorts!
+    div.container
+        div.row.shorts_row
+            div.col-sm
+                br
+                br
+                br
+                ul.list-unstyled(style="margin-left: 250px;")
+                    table.table-bordered.table-sm
+                        tbody
+                            tr.font-weight-normal
+                                th.font-weight-normal
+                                    h5(style="text-align:center;") Blauw
+                                th.font-weight-normal
+                                    h5(style="text-align:center;") Rood
+                                      h5(style="color:red; text-align:center;") 20% OFF
+                                th.font-weight-normal
+                                    h5(style="text-align:center;") Zwart
+                            tr.font-weight-normal
+                                th.font-weight-normal
+                                    h5(style="text-align:center;") €10,00
+                                th.font-weight-normal
+                                    h5(style="color:red; text-align:center;") €8,00
+                                th.font-weight-normal
+                                    h5(style="text-align:center;") €10,00
+                            tr
+                                th.font-weight-normal
+                                    a(href='/shortBlauw')
+                                        img(src="images/shortBlauw.png" alt="logo" height="200" width="200")
+                                th.font-weight-normal
+                                    a(href='/shortRood')
+                                        img(src="images/shortRood.png" alt="logo" height="200" width="200")
+                                th.font-weight-normal
+                                    a(href='/shortZwart')
+                                        img(src="images/shortZwart.png" alt="logo" height="200" width="200")
+

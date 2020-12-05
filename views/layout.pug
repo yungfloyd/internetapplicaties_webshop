@@ -19,18 +19,27 @@ html(lang=nl)
               img(src="images/favicon.png" alt="logo" height="65" width="65")
           li.nav-item
             h4
-              a(href="/boeken").nav-link Boeken
+              a(href="/shirts").nav-link Shirts
+          li.nav-item
+            h4
+              a(href="/shorts").nav-link Shorts
+          li.nav-item
+            h4
+              a(href="/sokken").nav-link Sokken
+          li.nav-item
+            h4
+              a(href="/trainings").nav-link Trainings
           li.nav-item
             h4
               a(href='/contact').nav-link Contact
-          
+          li
+            a(href='/winkelwagen')
+              img(src="images/winkelwagen.png" alt="logo" height="65" width="65")
           if(!user)
             a(href="/login").btn.btn-outline-success.login-btn Login
           if(user)
-            .align-middle.logged_in
-              a(href="logout")
-                p Hallo, #{user.username}
-    
+            p.login-btn Hallo, #{user.username}
+            a(href="logout").btn.btn-outline-success Logout
     block content
 
     script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js", integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj", crossorigin="anonymous")

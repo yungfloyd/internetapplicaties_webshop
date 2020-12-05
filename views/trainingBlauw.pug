@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    div.container
+        div.row.contact_row
+            div.col-sm
+                ul.list-unstyled(style="margin-left: 25px;")
+                    table.table-bordered.table-sm
+                        tbody
+                            tr.font-weight-normal
+                                th.font-weight-normal
+                                    h5(style="color:red; text-align:center;") €12,50
+                            tr
+                                th.font-weight-normal
+                                    img(src="images/trainingBlauw.png" alt="logo" height="400" width="400")
+            div.col-sm
+                h5 Zwarte trainingsbroek
+                    h5(style="color:red") 20% OFF
+                caddie(action="")
+                    div.caddie-group
+                        label Aantal
+                        input(type="text").caddie-control
+                    div.caddie-group
+                        label Maat 
+                        select#caddie-control(name="maat")
+                            option(value="XS").caddie-control XS
+                            option(value="S").caddie-control S
+                            option(value="M").caddie-control M
+                            option(value="L").caddie-control L
+                            option(value="XL").caddie-control XL
+                            option(value="XXL").caddie-control XXL
+                        br
+                        br
+                    input(type="submit" onclick='addToCaddie()' value="Aan winkelwagen toevoegen").btn.btn-primary
