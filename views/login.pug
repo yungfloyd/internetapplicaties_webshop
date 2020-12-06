@@ -3,12 +3,11 @@ extends layout
 block content
     .container
         .row.justify-content-center
-            .login.col-sm-4.rounded
+            .login.col-sm-4.rounded.h-50
                 h3 Login
                 form(role="form" action="/login" method="POST")
-                    p Je kan inloggen met je gebruikersnaam of e-mailadres
                     .form-group
-                        input(type="text" name="emailOrUsername" placeholder="Gebruikersnaam/E-mail" autocomplete="username email").form-control
+                        input(type="text" name="username" placeholder="Gebruikersnaam" autocomplete="username").form-control
                     .form-group
                         input(type="password" name="password" placeholder="Wachtwoord" autocomplete="current-password").form-control
                     button(type="submit").btn.btn-primary Aanmelden

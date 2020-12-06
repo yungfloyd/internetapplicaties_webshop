@@ -1,21 +1,17 @@
-.login-btn {
-  position: absolute;
-  right: 25px;
-}
-
-div.login {
+.login {
   background-color: grey;
   color: blue;
   margin-top: 30px;
+  margin-left: 30px;
   margin-right: 30px;
-  height: 255px;
+  padding-bottom: 10px;
 }
 
-div.register {
+.register {
   background-color: red;
   color: white;
-  margin-top: 30px;
-  height: 450px;
+  margin: 30px;
+  padding-bottom: 10px;
 }
 
 .contact_row {

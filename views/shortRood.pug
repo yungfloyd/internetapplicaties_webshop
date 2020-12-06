@@ -7,28 +7,28 @@ block content
                 ul.list-unstyled(style="margin-left: 25px;")
                     table.table-bordered.table-sm
                         tbody
-                            tr.font-weight-normal
+                            tr
                                 th.font-weight-normal
                                     h5(style="color:red; text-align:center;") €8,00
                             tr
                                 th.font-weight-normal
-                                    img(src="images/shortRood.png" alt="logo" height="400" width="400")
+                                    img(src="images/shortRood.png" alt="logo" height="40%" )
             div.col-sm
                 h5 Rode short
                             h5(style="color:red") 20% OFF
                 caddie(action="")
-                    div.caddie-group
+                    div
                         label Aantal
-                        input(type="text").caddie-control
-                    div.caddie-group
+                        input(type="text")
+                    div
                         label Maat 
-                        select#caddie-control(name="maat")
-                            option(value="XS").caddie-control XS
-                            option(value="S").caddie-control S
-                            option(value="M").caddie-control M
-                            option(value="L").caddie-control L
-                            option(value="XL").caddie-control XL
-                            option(value="XXL").caddie-control XXL
+                        select(name="maat")
+                            option(value="XS") XS
+                            option(value="S") S
+                            option(value="M") M
+                            option(value="L") L
+                            option(value="XL") XL
+                            option(value="XXL") XXL
                         br
                         br
                     input(type="submit" onclick='addToCaddie()' value="Aan winkelwagen toevoegen").btn.btn-primary
