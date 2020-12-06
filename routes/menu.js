@@ -8,7 +8,11 @@ router.get('/', function(req, res, next) {
 
 // GET contact page.
 router.get('/contact', function(req, res, next) {
-    res.render('contact', {user :  req.user, title: 'Contact - Sportkledij'});
+    res.render('contact', {ingediend: false, user :  req.user, title: 'Contact - Sportkledij'});
+});
+
+router.post('/contact', function(req, res, next) {  
+    res.render('contact', {ingediend: true, user :  req.user, naam: req.body.naam, title: 'Contact - Sportkledij'});
 });
 
 // GET caddie page.
