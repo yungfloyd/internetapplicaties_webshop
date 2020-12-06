@@ -7,7 +7,7 @@ passport.serializeUser(Gebruiker.serializeUser());
 passport.deserializeUser(Gebruiker.deserializeUser());
 
 exports.login_get = function(req, res) {
-    res.render('login', { user: req.user });
+    res.render('login', { user: req.user, title: 'Login - Sportkledij' });
 };
 
 exports.login_post = [
@@ -33,7 +33,7 @@ exports.register_post = function(req, res) {
         req.body.password, 
         function(err, account) {
             if (err) {
-                return res.render('login');
+                return res.render('login', { user: req.user, title: 'Login - Sportkledij' });
             }
         passport.authenticate('local')(req, res, function () {
             res.redirect('/');
