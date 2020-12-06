@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("form#contactformulier").on('submit', function(e){
+    $("#contactformulier").on('submit', function(e){
         e.preventDefault();
         var data = $('input[name=naam]').val();
         $.ajax({
@@ -9,7 +9,7 @@ $(document).ready(function(){
             dataType: 'text'
         })
         .done(function(data){
-            $('h4').html(data.naam);
+            $('#contactText').html("<h4>Bedankt voor de inzending. We proberen u zo snel mogelijk een antwoord te bezorgen.</h4>");
         });
     });
 });

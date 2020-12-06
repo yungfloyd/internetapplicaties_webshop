@@ -12,7 +12,6 @@ var passport = require('passport');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
-
 // mongoDB connection
 const uri = "mongodb+srv://dbUser:VfT90sq65jBqAjur@cluster.rozhm.mongodb.net/webshopDB?retryWrites=true&w=majority";
 mongoose.connect(uri, {
