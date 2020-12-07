@@ -12,7 +12,7 @@ html(lang=nl)
   body
     header
       nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-        a(href="#").navbar-brand Sportkledij
+        a(href="/").navbar-brand Sportkledij
         
         button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
           span.navbar-toggler-icon
@@ -38,7 +38,7 @@ html(lang=nl)
             if(!user)
               a(href="/login").btn.btn-outline-success Login
             if(user)
-              p.login-btn Hallo, #{user.username}
+              span.nav-link Hallo, #{user.username}
               a(href="logout").btn.btn-outline-success Logout
 
     block content

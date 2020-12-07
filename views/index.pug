@@ -2,11 +2,9 @@ extends layout
 
 block content
     div.container
-        div.row.index_row
+        div.row
             div.col-sm
-                br
-                br
-                h4 WEBSHOP
+                h4.mt-3 WEBSHOP
                 p 
                 |Welkom bij onze nieuwe sportkledijwinkel in hartje Rumbeke! Voor passende kledij voor jong en oud kan u zeker bij ons terecht! Hebt u vragen betreffende ons assortiment? 
                 |Aarzel dan niet om ons te 
@@ -15,13 +13,10 @@ block content
                 ul.list-unstyled(style="margin-left: 25px;")
                 br                
             div.col-sm
-              br
-              br
-              h4 SOLDEN
+              h4.mt-3 SOLDEN
               p
               |Gedurende de solden kan u genieten van 20% korting van onderstaande artikelen! Betreffende actie loopt tot 21 december 2020.
-              br
-              br
+              
               table.table-bordered.table-sm
                   tbody
                       tr
@@ -29,14 +24,14 @@ block content
                       tr
                           th.font-weight-normal 
                             a(href='/shirts')
-                              img(src="images/shirtBlauw.png" alt="logo" height="100" width="100")
+                              img(src="images/shirtBlauw.png" alt="logo" height="20%")
                           th.font-weight-normal 
                             a(href='/shorts')
-                              img(src="images/shortRood.png" alt="logo" height="100" width="100") 
+                              img(src="images/shortRood.png" alt="logo" height="20%") 
                       tr
                           th.font-weight-normal 
                             a(href='/sokken')
-                              img(src="images/sokkenZwart.png" alt="logo" height="100" width="100")
+                              img(src="images/sokkenZwart.png" alt="logo" height="20%")
                           th.font-weight-normal 
                             a(href='/trainings')
-                              img(src="images/trainingBlauw.png" alt="logo" height="100" width="100")
+                              img(src="images/trainingBlauw.png" alt="logo" height="20%")
