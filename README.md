@@ -57,9 +57,6 @@ app.use(connectLivereload());
 
 ## MongoDB - MongoDB Cluster Atlas 
 Online cloud platform
-DB-user: `dbUser/VfT90sq65jBqAjur`  
-DatabaseName: `webshopDB`
-Connection string: `mongodb+srv://dbUser:<password>@cluster.rozhm.mongodb.net/<dbname>?retryWrites=true&w=majority`
 
 ## Mongoose
 Gebruiken om te verbinden met MongoDB  
